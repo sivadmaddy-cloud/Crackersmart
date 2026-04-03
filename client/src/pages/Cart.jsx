@@ -35,7 +35,7 @@ export default function Cart({ cart, setCart }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/create-order",
+        "https://crackersmart-2.onrender.com/api/create-order",
         { cart, name: user?.name || "Guest", email: user?.email || "guest@email.com" },
         { headers: { Authorization: `Bearer ${token}` } }
       );

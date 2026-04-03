@@ -284,10 +284,10 @@ function CrackerFormModal({ mode, cracker, onClose, onSuccess }) {
       const headers = { Authorization: `Bearer ${token}` };
 
       if (mode === "add") {
-        await axios.post("http://localhost:5000/crackers/add", payload, { headers });
+        await axios.post("https://crackersmart-2.onrender.com/crackers/add", payload, { headers });
         onSuccess("success", "Cracker added successfully 🎆");
       } else {
-        await axios.put(`http://localhost:5000/crackers/${cracker._id}`, payload, { headers });
+        await axios.put(`https://crackersmart-2.onrender.com/crackers/${cracker._id}`, payload, { headers });
         onSuccess("success", "Cracker updated ✅");
       }
     } catch (err) {
@@ -392,7 +392,7 @@ function AdminCrackersManager() {
   const fetchCrackers = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/crackers", {
+      const res = await axios.get("https://crackersmart-2.onrender.com/crackers", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCrackers(res.data);
@@ -410,7 +410,7 @@ function AdminCrackersManager() {
     setDelLoading(true);
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/crackers/${delTarget._id}`, {
+      await axios.delete(`https://crackersmart-2.onrender.com/crackers/${delTarget._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       showToast("success", `"${delTarget.name}" deleted`);

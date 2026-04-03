@@ -21,7 +21,7 @@ const SubscribePage = () => {
 
   const handlePayment = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/create-subscription", {
+      const res = await fetch("https://crackersmart-2.onrender.com/api/create-subscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

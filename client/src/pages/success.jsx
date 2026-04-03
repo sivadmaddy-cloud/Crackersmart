@@ -27,14 +27,14 @@ function Success() {
       try {
         // ✅ 1. Get order details from Stripe
         const res = await axios.get(
-          `http://localhost:5000/api/order/${sessionId}`
+          `https://crackersmart-2.onrender.com/api/order/${sessionId}`
         );
 
         const { items, amount } = res.data;
 
         // ✅ 2. Save order to DB (WITH sessionId 🔥)
         const saveRes = await axios.post(
-          "http://localhost:5000/api/place-order",
+          "https://crackersmart-2.onrender.com/api/place-order",
           {
             items,
             amount,

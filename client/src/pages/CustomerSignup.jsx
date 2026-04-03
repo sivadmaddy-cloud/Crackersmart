@@ -17,7 +17,7 @@ function CustomerSignup() {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/auth/signup", {
+      const res = await axios.post("https://crackersmart-2.onrender.com/auth/signup", {
         name:     name.trim(),
         email:    email.trim(),
         password: password.trim(),

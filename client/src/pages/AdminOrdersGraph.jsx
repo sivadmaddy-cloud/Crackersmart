@@ -11,7 +11,7 @@ function AdminOrdersGraph() {
     const token = localStorage.getItem("token");
     if (!token) return;
 
-    axios.get("http://localhost:5000/api/all-orders", {
+    axios.get("https://crackersmart-2.onrender.com/api/all-orders", {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => {

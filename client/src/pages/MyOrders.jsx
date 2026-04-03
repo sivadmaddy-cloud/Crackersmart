@@ -19,7 +19,7 @@ export default function MyOrders() {
           return;
         }
 
-        const res = await axios.get("http://localhost:5000/api/my-orders", {
+        const res = await axios.get("https://crackersmart-2.onrender.com/api/my-orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

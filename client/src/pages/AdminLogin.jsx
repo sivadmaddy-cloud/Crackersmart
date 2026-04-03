@@ -15,7 +15,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/admin/login", {
+      const res = await axios.post("https://crackersmart-2.onrender.com/admin/login", {
         email:    email.trim(),
         password: password.trim(),
       });

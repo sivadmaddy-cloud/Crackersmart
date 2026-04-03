@@ -17,7 +17,7 @@ function CustomerLogin() {
     if (!email || !password) return alert("Enter email & password");
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/auth/login", {
+      const res = await axios.post("https://crackersmart-2.onrender.com/auth/login", {
         email,
         password,
       });
@@ -37,7 +37,7 @@ function CustomerLogin() {
     if (!phone) return alert("Enter phone number");
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/auth/send-otp", { phone });
+      const res = await axios.post("https://crackersmart-2.onrender.com/auth/send-otp", { phone });
       if (res.data.success) {
         setOtpSent(true);
       } else {
@@ -54,7 +54,7 @@ function CustomerLogin() {
     if (!otp) return alert("Enter OTP");
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/auth/verify-otp", { phone, otp });
+      const res = await axios.post("https://crackersmart-2.onrender.com/auth/verify-otp", { phone, otp });
       if (!res.data.success) return alert(res.data.message || "OTP verification failed");
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role",  res.data.user?.role || "customer");

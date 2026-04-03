@@ -106,7 +106,7 @@ const HomePage = () => {
               <div className="w-2/3 h-full">
                 <img src={crackers[index].image} alt={crackers[index].name} className="w-full h-full object-cover rounded-l-[10px]" />
               </div>
-              {/* <div className="w-1/3 bg-white flex flex-col justify-center p-6 rounded-r-[20px]"> */}
+       
               <div className="w-1/3 bg-white flex flex-col justify-center p-6 rounded-r-[20px] gap-4">
 
 
@@ -116,10 +116,7 @@ const HomePage = () => {
   Light Up Every Moment with <span className="font-extrabold">Sparkling Joy ✨</span>
 </p>
 
-{/* <p className="text-md font-semibold text-gray-700">
-  Turn Your Nights into Festivals of 
-  <span className="text-yellow-500 font-bold ml-1 drop-shadow-md">Light 🌟</span>
-</p> */}
+
 
 <p className="text-xl font-extrabold text-orange-600 tracking-wide">
   Ignite Happiness, One Crack at a Time! 💥

@@ -88,7 +88,7 @@ export default function CrackerList() {
 
   const fetchCrackers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/crackers");
+      const res = await axios.get("https://crackersmart-2.onrender.com/crackers");
       setCrackers(res.data);
     } catch (err) { console.error(err); }
   };

@@ -15,7 +15,7 @@ export default function OrdersAdmin() {
         // ✅ FIXED: was "adminToken" — must match what AdminLogin saves ("token")
         const token = localStorage.getItem("token");
         if (!token) { setError("Please login as admin"); setLoading(false); return; }
-        const res = await axios.get("http://localhost:5000/api/all-orders", {
+        const res = await axios.get("https://crackersmart-2.onrender.com/api/all-orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrders(res.data.orders || []);

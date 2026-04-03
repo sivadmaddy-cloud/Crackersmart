@@ -54,7 +54,7 @@ function AddCracker() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/crackers/add",
+        "https://crackersmart-2.onrender.com/add",
         {
           name,
           image,

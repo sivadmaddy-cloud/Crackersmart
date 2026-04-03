@@ -103,8 +103,8 @@ app.post("/api/create-order", async (req, res) => {
         },
         quantity: item.qty,
       })),
-      success_url: "http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url:  "http://localhost:5173/cart",
+      success_url: "https://zippy-dango-5a7c26.netlify.app/success?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url:  "https://zippy-dango-5a7c26.netlify.app/cart",
     });
     res.json({ url: session.url });
   } catch (err) {
@@ -144,8 +144,8 @@ app.post("/api/create-subscription", async (req, res) => {
       customer_email: email,
       mode: "payment",
       line_items: [{ price_data: { currency: "inr", product_data: { name: planName }, unit_amount: amount }, quantity: 1 }],
-      success_url: "http://localhost:5173/success?type=subscription",
-      cancel_url:  "http://localhost:5173/subscribe",
+      success_url: "https://zippy-dango-5a7c26.netlify.app/success?type=subscription",
+      cancel_url:  "https://zippy-dango-5a7c26.netlify.app/subscribe",
     });
     res.json({ url: session.url });
   } catch (err) {
