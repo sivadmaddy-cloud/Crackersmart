@@ -1,14 +1,3 @@
-// const express = require("express");
-// const router = express.Router();
-// const { signup, login } = require("../controllers/customercontroller");
-
-// // Authentication endpoints
-// router.post("/signup", signup);
-// router.post("/login", login);
-
-// module.exports = router; 
-
-
 const express = require("express");
 const router  = express.Router();
 const { signup, login } = require("../controllers/customercontroller");

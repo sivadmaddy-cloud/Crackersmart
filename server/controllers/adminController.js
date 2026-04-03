@@ -31,16 +31,3 @@ const loginAdmin = async ({ email, password }) => {
 };
 
 module.exports = { loginAdmin };
-// ```
-
-// ---
-
-// ### After restarting server — paste your backend terminal output here
-
-// You will see exactly:
-// ```
-// 📩 Login attempt: admin@gmail.com admin123
-// 📦 Found in DB: {...}
-// 🔑 DB pass: "admin123"
-// 🔑 Input pass: "admin123"
-// ✅ Match: true
