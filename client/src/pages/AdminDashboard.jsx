@@ -28,13 +28,13 @@ function AdminDashboard() {
       </div>
 
       {/* Dashboard Links */}
-      <div className="grid grid-cols-4 gap-6 mb-10">
-        <Link
+      <div className="grid grid-cols-3 justify-center gap-6 mb-10">
+        {/* <Link
           to="/add-cracker"
           className="bg-blue-500 text-white p-6 rounded shadow text-center hover:bg-blue-600"
         >
           Add Crackers
-        </Link>
+        </Link> */}
 
         <Link
           to="/crackers"

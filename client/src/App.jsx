@@ -11,7 +11,6 @@ import { useState, useEffect } from "react";
 // Pages & Components
 import AuthPage from "./components/Authpage";
 import Home from "./pages/Home";
-import AddCracker from "./pages/AddCracker";
 import CrackerList from "./pages/CrackerList";
 import OrdersAdmin from "./pages/OrdersAdmin";
 import MyOrders from "./pages/MyOrders";
@@ -72,7 +71,7 @@ function Layout({ cart, setCart }) {
         {/* Admin Orders */}
         <Route path="/admin-orders" element={<AdminRoute><OrdersAdmin /></AdminRoute>} />
 
-        <Route path="/add-cracker" element={<AdminRoute><AddCracker /></AdminRoute>} />
+       
         <Route path="/admin-crackers" element={<AdminRoute><AdminCrackersManager /></AdminRoute>} />
         <Route path="/admin-dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         <Route path="/ai" element={<AIChat />} />

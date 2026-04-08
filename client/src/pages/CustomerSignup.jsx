@@ -29,7 +29,7 @@ function CustomerSignup() {
       }
 
       alert("Account created! Please sign in.");
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       alert(error.response?.data?.message || "Signup failed. Try again.");
     } finally {
